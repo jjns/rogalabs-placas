@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Registros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Placa</th>
+      <th>Proprietario</th>
+      <th>Modelo</th>
+      <th>Ano</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registros.each do |registro| %>
+      <tr>
+        <td><%= registro.placa %></td>
+        <td><%= registro.proprietario %></td>
+        <td><%= registro.modelo %></td>
+        <td><%= registro.ano %></td>
+        <td><%= link_to 'Editar', edit_registro_path(registro) %></td>
+        <td><%= link_to 'Apagar', registro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Registro', new_registro_path %>

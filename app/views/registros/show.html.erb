@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Placa:</strong>
+  <%= @registro.placa %>
+</p>
+
+<p>
+  <strong>Proprietario:</strong>
+  <%= @registro.proprietario %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @registro.modelo %>
+</p>
+
+<p>
+  <strong>Ano:</strong>
+  <%= @registro.ano %>
+</p>
+
+<%= link_to 'Edit', edit_registro_path(@registro) %> |
+<%= link_to 'Back', registros_path %>
